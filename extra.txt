@@ -1,0 +1,29 @@
+CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    Age INT,
+    Department VARCHAR(50),
+    Salary DECIMAL(10, 2)
+);
+
+
+INSERT INTO Employees (EmployeeID, FirstName, LastName, Age, Department, Salary) VALUES
+(1, 'Alice', 'Johnson', 30, 'HR', 50000.00),
+(2, 'Bob', 'Smith', 45, 'Finance', 75000.00),
+(3, 'Charlie', 'Brown', 28, 'IT', 60000.00),
+(4, 'Diana', 'Taylor', 35, 'Marketing', 65000.00),
+(5, 'Ethan', 'Clark', 29, 'IT', 55000.00);
+
+
+
+1.Retrieve all employees' details from the table.
+2.Retrieve names and salaries of employees in the IT department.
+3.Find employees whose first name starts with the letter 'A'.
+4.Find employees whose last name contains 'son'.
+5.Delete employees who are older than 40 years.
+6.Delete all employees from the Marketing department.
+7.Add a new column for storing phone numbers.
+8.Modify the Salary column to store up to 12 digits with 2 decimal places.
+9.Increase the salary of employees in the IT department by 10%.
+10.Update the department of 'Charlie Brown' to 'Development'.
