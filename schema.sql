@@ -113,3 +113,127 @@ INSERT INTO CUSTOMER (CID, CustomerName, ContactName, Address, City, PostalCode,
 (3, 'Latonio Moreno Taqueria', 'Antonio Moreno', 'Mataderos 2312', 'Mexico D.F.', '05023', 'Mexico'),
 (4, 'Around the Hors', 'Thomas Hardy', '120 Hanover Sq.', 'London', 'WA1 1DP', 'UK'),
 (5, 'Berglunds snabbkop', 'Christina Berglund', 'Berguvsvagen 8', 'Lulea', 'S-958 22', 'Sweden');
+
+
+--lab 12
+
+-- Part A
+-- Create Student_Marks table and insert data.
+CREATE TABLE Student_Marks (
+    Sid INT,
+    SName VARCHAR(50),
+    Marks INT
+);
+
+INSERT INTO Student_Marks (Sid, SName, Marks) VALUES
+(1, 'John', 90),
+(2, 'Martin', 80),
+(3, 'Carol', 89),
+(4, 'Jack', 99),
+(5, 'Rose', 88),
+(6, 'Mary', 90);
+
+-- Part B
+-- Create Employee table and insert data.
+CREATE TABLE Employee (
+    EID INT,
+    EName VARCHAR(50),
+    Department VARCHAR(50),
+    Salary INT,
+    JoiningDate DATE,
+    City VARCHAR(50)
+);
+
+INSERT INTO Employee (EID, EName, Department, Salary, JoiningDate, City) VALUES
+(101, 'Rahul', 'Admin', 56000, '1990-01-01', 'Rajkot'),
+(102, 'Hardik', 'IT', 18000, '1990-09-25', 'Ahmedabad'),
+(103, 'Bhavin', 'HR', 25000, '1991-05-14', 'Baroda'),
+(104, 'Bhoomi', 'Admin', 39000, '1991-02-08', 'Rajkot'),
+(105, 'Rohit', 'IT', 17000, '1990-07-23', 'Jamnagar'),
+(106, 'Priya', 'IT', 9000, '1990-10-18', 'Ahmedabad'),
+(107, 'Neha', 'HR', 34000, '1991-12-25', 'Rajkot');
+
+--lab 13
+
+CREATE TABLE Student (
+    SID INT,
+    SName VARCHAR(50),
+    Department VARCHAR(50),
+    SPI DECIMAL(4,2),
+    City VARCHAR(50)
+);
+
+INSERT INTO Student (SID, SName, Department, SPI, City) VALUES
+    (101, 'Jay', 'MCA', 8.8, 'Rajkot'),
+    (102, 'Deep', 'BCA', 5.6, 'Ahmedabad'),
+    (103, 'Bhavin', 'BBA', 8.3, 'Baroda'),
+    (104, 'Dharmik', 'BCA', 9.9, 'Rajkot'),
+    (105, 'Jeet', 'MCA', 10.0, 'Jamnagar'),
+    (106, 'Priya', 'MBA', 5.5, 'Ahmedabad'),
+    (107, 'Neha', 'BSCIT', 6.5, 'Rajkot');
+
+--lab 14
+
+CREATE TABLE Computer (
+    RollNo INT,
+    Name VARCHAR(50)
+);
+
+CREATE TABLE Electrical (
+    RollNo INT,
+    Name VARCHAR(50)
+);
+
+INSERT INTO Computer (RollNo, Name) VALUES
+    (101, 'Ajay'),
+    (109, 'Haresh'),
+    (115, 'Manish');
+
+INSERT INTO Electrical (RollNo, Name) VALUES
+    (105, 'Ajay'),
+    (107, 'Mahesh'),
+    (115, 'Manish');
+
+
+--Lab-15 
+
+CREATE TABLE Cricket (
+    Name VARCHAR(50),
+    City VARCHAR(50),
+    Age INT
+);
+
+
+INSERT INTO Cricket (Name, City, Age) VALUES
+    ('Sachin Tendulkar', 'Mumbai', 30),
+    ('Rahul Dravid', 'Bombay', 35),
+    ('M. S. Dhoni', 'Jharkhand', 31),
+    ('Suresh Raina', 'Gujarat', 30);
+
+
+-- Lab-16
+
+-- Creating Tables
+CREATE TABLE Student (
+    Rno INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Branch VARCHAR(10)
+);
+
+CREATE TABLE Result (
+    Rno INT,
+    SPI FLOAT
+);
+
+CREATE TABLE Employee (
+    EmployeeNo VARCHAR(10) PRIMARY KEY,
+    Name VARCHAR(50),
+    ManagerNo VARCHAR(10)
+);
+
+-- Inserting Data
+INSERT INTO Student VALUES (101, 'Raju', 'CE'), (102, 'Amit', 'CE'), (103, 'Sanjay', 'ME'),
+                           (104, 'Neha', 'EC'), (105, 'Meera', 'EE'), (106, 'Mahesh', 'ME');
+INSERT INTO Result VALUES (101, 8.8), (102, 9.2), (103, 7.6), (104, 8.2), (105, 7.0), (107, 8.9);
+INSERT INTO Employee VALUES ('E01', 'Tarun', NULL), ('E02', 'Rohan', 'E02'), ('E03', 'Priya', 'E01'),
+                            ('E04', 'Milan', 'E03'), ('E05', 'Jay', 'E01'), ('E06', 'Anjana', 'E04');
