@@ -1,0 +1,17 @@
+
+
+1. How do you display the current date in `YYYY-MM-DD` format in MS SQL?
+3. How can you convert a datetime value into `MM/DD/YYYY` format?  
+4. Which function allows you to format a date as `DD-MM-YYYY` in MS SQL?  
+5. How can you find the first day of the current month using SQL?
+	SELECT DATEADD(DAY, 1, EOMONTH(GETDATE(), -1))
+6. What query would you use to get the difference in days between two dates?  
+7. How can you check if a string is a valid date format in MS SQL?  
+8. What query converts a string `28-Jan-2025` into a proper `DATE` data type?  
+9. How can you format the current time as `HH:mm:ss` using SQL?  
+12. What is the SQL query to add 30 days to the current date and display it in `YYYY/MM/DD` format?  
+13. How do you retrieve only the date part (without the time) from a datetime column? 
+	SELECT CAST(GETDATE() AS DATE);
+	SELECT CONVERT(DATE, GETDATE());
+14. How can you format the current date and time as `YYYY-MM-DD HH:mm:ss`?  
+15. What SQL query would return all records from a table where the date column is in a specific range, formatted as `YYYY/MM/DD`?  
