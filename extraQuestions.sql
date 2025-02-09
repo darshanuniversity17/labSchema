@@ -82,7 +82,4 @@ INSERT INTO Students124 VALUES
 -- 34. What is the fee distribution bracket per faculty?  
 -- 36. How many students are enrolled in courses with odd-numbered course IDs?  
 -- 37. What is the average SPI of students with a scholarship greater than 10000?  
--- 38. Which courses have no failed students?  
 -- 39. What is the maximum scholarship amount per gender?  
--- 41. Which course has the most consistent SPI performance?  
--- 43. Which courses have all students receiving a scholarship?  
