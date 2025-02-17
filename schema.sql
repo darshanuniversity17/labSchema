@@ -237,3 +237,84 @@ INSERT INTO Student VALUES (101, 'Raju', 'CE'), (102, 'Amit', 'CE'), (103, 'Sanj
 INSERT INTO Result VALUES (101, 8.8), (102, 9.2), (103, 7.6), (104, 8.2), (105, 7.0), (107, 8.9);
 INSERT INTO Employee VALUES ('E01', 'Tarun', NULL), ('E02', 'Rohan', 'E02'), ('E03', 'Priya', 'E01'),
                             ('E04', 'Milan', 'E03'), ('E05', 'Jay', 'E01'), ('E06', 'Anjana', 'E04');
+
+
+-- Lab-17
+
+-- Creating Tables
+CREATE TABLE City (
+    CityID INT PRIMARY KEY,
+    CityName VARCHAR(50) UNIQUE,
+    Pincode INT,
+    Remarks VARCHAR(50)
+);
+
+CREATE TABLE Village (
+    VillageID INT PRIMARY KEY,
+    VillageName VARCHAR(50),
+    CityID INT FOREIGN KEY REFERENCES City(CityID)
+);
+
+-- Inserting Data
+INSERT INTO City VALUES (1, 'Rajkot', 360005, 'Good'), (2, 'Surat', 335009, 'Good'), 
+                        (3, 'Baroda', 390001, 'Awesome'), (4, 'Jamnagar', 361003, 'Smart'),
+                        (5, 'Junagadh', 362229, 'Historic'), (6, 'Morvi', 363641, 'Ceramic');
+
+INSERT INTO Village VALUES (101, 'Raiya', 1), (102, 'Madhapar', 1), (103, 'Dodka', 3), 
+                           (104, 'Falla', 4), (105, 'Bhesan', 5), (106, 'Dhoraji', 5);
+
+
+
+
+-- LAB 18
+
+-- Creating Tables
+CREATE TABLE Department (
+    DID INT PRIMARY KEY,
+    DName VARCHAR(50)
+);
+
+CREATE TABLE Student (
+    Rno INT PRIMARY KEY,
+    Name VARCHAR(50),
+    City VARCHAR(50),
+    DID INT FOREIGN KEY REFERENCES Department(DID)
+);
+
+CREATE TABLE Academic (
+    Rno INT FOREIGN KEY REFERENCES Student(Rno),
+    SPI FLOAT,
+    Bklog INT
+);
+
+-- Inserting Data
+INSERT INTO Department VALUES (10, 'Computer'), (20, 'Electrical'), (30, 'Mechanical'), (40, 'Civil');
+INSERT INTO Student VALUES (101, 'Raju', 'Rajkot', 10), (102, 'Amit', 'Ahmedabad', 20),
+                           (103, 'Sanjay', 'Baroda', 40), (104, 'Neha', 'Rajkot', 20),
+                           (105, 'Meera', 'Ahmedabad', 30), (106, 'Mahesh', 'Baroda', 10);
+INSERT INTO Academic VALUES (101, 8.8, 0), (102, 9.2, 2), (103, 7.6, 1), 
+                            (104, 8.2, 4), (105, 7.0, 2), (106, 8.9, 3);
+
+
+
+-- LAB 20
+
+-- Creating Table
+CREATE TABLE Student (
+    StuID INT PRIMARY KEY,
+    Name VARCHAR(20),
+    EnrollmentNo INT,
+    Division VARCHAR(10),
+    Sem VARCHAR(100),
+    BirthDate DATETIME,
+    Email VARCHAR(100),
+    ContactNo VARCHAR(10)
+);
+
+-- Inserting Data
+INSERT INTO Student (StuID, Name, EnrollmentNo, Division, Sem, Email, ContactNo) VALUES
+(101, 'Naimish Patel', 90200107051, 'BCX-3', '3', 'naimishp49@gmail.com', '8866205253'),
+(102, 'Firoz A. S.', 90200107090, 'BCY-3', '3', 'Firoz.me@gmail.com', '8885999922'),
+(103, 'Krunal Vyas', 90243107101, 'BCZ-5', '5', 'Krunal.vyas@gmail.com', '9990888877'),
+(104, 'Vijay Patel', 90200107102, 'BCX-5', '5', 'vijay.patel123@gmail.com', '8787878787'),
+(105, 'Vimal Trivedi', 90200107103, 'BCY-3', '3', 'Maulik123@gmail.com', '8789564512');
