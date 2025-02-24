@@ -318,3 +318,35 @@ INSERT INTO Student (StuID, Name, EnrollmentNo, Division, Sem, Email, ContactNo)
 (103, 'Krunal Vyas', 90243107101, 'BCZ-5', '5', 'Krunal.vyas@gmail.com', '9990888877'),
 (104, 'Vijay Patel', 90200107102, 'BCX-5', '5', 'vijay.patel123@gmail.com', '8787878787'),
 (105, 'Vimal Trivedi', 90200107103, 'BCY-3', '3', 'Maulik123@gmail.com', '8789564512');
+
+
+
+
+-- LAB 24
+
+-- Implementation of Joins in SQL
+CREATE TABLE Students (
+    StudentID INT PRIMARY KEY,
+    StudentName VARCHAR(20)
+);
+
+CREATE TABLE IssuedBooks (
+    IssueID INT PRIMARY KEY,
+    StudentID INT FOREIGN KEY REFERENCES Students(StudentID),
+    BookName VARCHAR(50),
+);
+
+-- Inserting Data into Students
+INSERT INTO Students (StudentID, StudentName) VALUES
+(1, 'Alice'),
+(2, 'Bob'),
+(3, 'Charlie'),
+(4, 'Diana');
+
+-- Inserting Data into IssuedBooks
+INSERT INTO IssuedBooks (IssueID, StudentID, BookName) VALUES
+(1001, 1, 'Mathematics'),
+(1002, 2, 'Physics'),
+(1003, 3, 'Chemistry'),
+(1004, 1, 'Biology'),
+(1005, NULL, 'Computer');
