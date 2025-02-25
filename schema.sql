@@ -303,7 +303,7 @@ INSERT INTO Academic VALUES (101, 8.8, 0), (102, 9.2, 2), (103, 7.6, 1),
 CREATE TABLE Student (
     StuID INT PRIMARY KEY,
     Name VARCHAR(20),
-    EnrollmentNo INT,
+    EnrollmentNo VARCHAR(20),
     Division VARCHAR(10),
     Sem INT
     Email VARCHAR(100),
@@ -312,11 +312,11 @@ CREATE TABLE Student (
 
 -- Inserting Data
 INSERT INTO Student (StuID, Name, EnrollmentNo, Division, Sem, Email, ContactNo) VALUES
-(101, 'Naimish Patel', 90200107051, 'BCX-3', 3, 'naimishp49@gmail.com', '8866205253'),
-(102, 'Firoz A. S.', 90200107090, 'BCY-3', 3, 'Firoz.me@gmail.com', '8885999922'),
-(103, 'Krunal Vyas', 90243107101, 'BCZ-5', 5, 'Krunal.vyas@gmail.com', '9990888877'),
-(104, 'Vijay Patel', 90200107102, 'BCX-5', 5, 'vijay.patel123@gmail.com', '8787878787'),
-(105, 'Vimal Trivedi', 90200107103, 'BCY-3', 3, 'Maulik123@gmail.com', '8789564512');
+(101, 'Naimish Patel', '90200107051', 'BCX-3', 3, 'naimishp49@gmail.com', '8866205253'),
+(102, 'Firoz A. S.', '90200107090', 'BCY-3', 3, 'Firoz.me@gmail.com', '8885999922'),
+(103, 'Krunal Vyas', '90243107101', 'BCZ-5', 5, 'Krunal.vyas@gmail.com', '9990888877'),
+(104, 'Vijay Patel', '90200107102', 'BCX-5', 5, 'vijay.patel123@gmail.com', '8787878787'),
+(105, 'Vimal Trivedi', '90200107103', 'BCY-3', 3, 'Maulik123@gmail.com', '8789564512');
 
 
 
