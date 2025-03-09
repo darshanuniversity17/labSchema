@@ -318,7 +318,70 @@ INSERT INTO Student (StuID, Name, EnrollmentNo, Division, Sem, Email, ContactNo)
 (104, 'Vijay Patel', '90200107102', 'BCX-5', 5, 'vijay.patel123@gmail.com', '8787878787'),
 (105, 'Vimal Trivedi', '90200107103', 'BCY-3', 3, 'Maulik123@gmail.com', '8789564512');
 
+-- LAB 21
 
+-- Create the Hospital table
+CREATE TABLE Hospital (
+    PatientID INT PRIMARY KEY,
+    PatientName VARCHAR(20),
+    Age INT,
+    Gender VARCHAR(10),
+    DoctorName VARCHAR(100),
+    AppointmentDate DATETIME
+);
+
+-- Insert the given data
+INSERT INTO Hospital (PatientID, PatientName, Age, Gender, DoctorName, AppointmentDate)
+VALUES 
+(1001, 'John Doe', 45, 'Male', 'Dr. Alice Johnson', '2024-11-30'),
+(1002, 'Jane Smith', 30, 'Female', 'Dr. Robert Brown', '2024-11-30'),
+(1003, 'Sara Williams', 28, 'Female', 'Dr. Emily Davis', '2024-12-01'),
+(1004, 'Tom Hardy', 40, 'Male', 'Dr. Alice Johnson', '2024-12-01'),
+(1005, 'Eva Green', 35, 'Female', 'Dr. Robert Brown', '2024-12-02');
+
+-- LAB 22
+
+-- LIKE Operator Implementation
+CREATE TABLE Employee (
+    EmployeeID INT PRIMARY KEY,
+    FirstName VARCHAR(20),
+    LastName VARCHAR(20),
+    Department VARCHAR(20),
+    Salary INT
+);
+
+-- Inserting Data
+INSERT INTO Employee VALUES 
+(1001, 'Meet', 'Patel', 'HR', 50000),
+(1002, 'Jay', 'Shah', 'Admin', 60000),
+(1003, 'Raj', 'Patel', 'Production', 55000),
+(1004, 'Mayank', 'Purohit', 'HR', 70000),
+(1005, 'Jeet', 'Santoki', 'Transport', 45000),
+(1006, 'Vishal', 'Rathod', 'Admin', 65000);
+
+--lab 23
+
+-- AGGREGATE FUNCTION IMPLEMENTATION
+CREATE TABLE Student (
+    StudentID INT PRIMARY KEY,
+    StudentName VARCHAR(20),
+    Age INT,
+    Department VARCHAR(30),
+    Semester INT,
+    Subject VARCHAR(50),
+    Marks INT
+);
+
+-- Inserting Data
+INSERT INTO Student VALUES
+(1001, 'Alice', 30, 'Computer Science', 1, 'Mathematics', 99),
+(1002, 'Bob', 28, 'Electronics', 1, 'Physics', 58),
+(1003, 'Charlie', 35, 'Mechanical', 2, 'Chemistry', 65),
+(1004, 'Diana', 40, 'Electronics', 3, 'Mathematics', 88),
+(1005, 'Eve', 25, 'Mechanical', 5, 'Chemistry', 75),
+(1006, 'Frank', 32, 'Computer Science', 5, 'Mathematics', 97),
+(1007, 'Gvak', 23, 'Electronics', 1, 'Mathematics', 89),
+(1008, 'Wynk', 52, 'Computer Science', 3, 'Physics', 75);
 
 
 -- LAB 24
