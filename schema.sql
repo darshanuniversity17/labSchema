@@ -412,3 +412,34 @@ INSERT INTO IssuedBooks (IssueID, StudentID, BookName) VALUES
 (1003, 3, 'Chemistry'),
 (1004, 1, 'Biology'),
 (1005, NULL, 'Computer');
+
+
+--Lab-25
+
+
+CREATE TABLE Department (
+    DepartmentID INT PRIMARY KEY,
+    DepartmentName VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE Employee (
+    EmployeeID INT PRIMARY KEY,
+    EmployeeName VARCHAR(20) NOT NULL,
+    Age INT NOT NULL,
+    DepartmentID INT FOREIGN KEY REFERENCES Department(DepartmentID),
+    Salary INT NOT NULL
+);
+
+INSERT INTO Department (DepartmentID, DepartmentName) VALUES 
+(1, 'HR'),
+(2, 'IT'),
+(3, 'Finance');
+
+INSERT INTO Employee (EmployeeID, EmployeeName, Age, DepartmentID, Salary) VALUES 
+(1001, 'Alice', 30, 1, 50000),
+(1002, 'Bob', 28, 2, 60000),
+(1003, 'Charlie', 35, 3, 55000),
+(1004, 'Diana', 40, 2, 70000),
+(1005, 'Eve', 25, 1, 45000),
+(1006, 'Frank', 32, 3, 65000);
+
