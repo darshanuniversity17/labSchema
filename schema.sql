@@ -443,3 +443,24 @@ INSERT INTO Employee (EmployeeID, EmployeeName, Age, DepartmentID, Salary) VALUE
 (1005, 'Eve', 25, 1, 45000),
 (1006, 'Frank', 32, 3, 65000);
 
+
+--LAB_26
+
+-- Create the Restaurant table
+CREATE TABLE Restaurant (
+    OrderID INT PRIMARY KEY,
+    CustomerName VARCHAR(20),
+    DishName VARCHAR(10),
+    Quantity INT,
+    Price DECIMAL(10,2),
+    OrderDate DATETIME
+);
+
+-- Insert records into the Restaurant table
+INSERT INTO Restaurant (OrderID, CustomerName, DishName, Quantity, Price, OrderDate)
+VALUES
+    (1001, 'John Doe', 'Pizza', 2, 12.50, '2024-11-30'),
+    (1002, 'Jane Smith', 'Burger', 1, 8.00, '2024-11-30'),
+    (1003, 'Sara Williams', 'Pasta', 3, 10.00, '2024-12-01'),
+    (1004, 'Tom Hardy', 'Pizza', 1, 12.50, '2024-12-01'),
+    (1005, 'Eva Green', 'Salad', 2, 6.50, '2024-12-02');
